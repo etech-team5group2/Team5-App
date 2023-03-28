@@ -22,5 +22,10 @@ pipeline{
 				sh'lsblk'
 			}
 		}
+        stage('5-ops-check'){
+            steps{
+                sh'cat /etc/os-release'
+            }
+        }
 	}
 }
