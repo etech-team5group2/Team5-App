@@ -32,5 +32,10 @@ pipeline{
             	sh 'bash -x /var/lib/jenkins/workspace/Team5App/script.sh'
         	}
 		}
+		stage ('7-env-check'){
+			steps{
+				echo "This is ${env.BUILD_NUMBER} build"
+			}
+		}
 	}
 }
