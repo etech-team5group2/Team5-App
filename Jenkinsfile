@@ -27,12 +27,9 @@ pipeline{
                 sh'cat /etc/os-release'
             }
         }
-	    stage('6-script-control'){
-             steps{
-            sh 'bash -x /var/lib/jenkins/workspace/Team5App/script.sh'
-            }  
+	}stage('script-control')
+        steps{
+            sh 'bash -x /var/lib/jenkins/workspace/Team5App'
         }
-
-    }
 }
 
